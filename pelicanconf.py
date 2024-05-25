@@ -2,6 +2,8 @@ AUTHOR = 'Merlin'
 SITENAME = "Merlin's_portfolio"
 SITEURL = ''
 
+PLUGINS = ["pelican_katex"]
+
 THEME = "themes/custom/"
 
 PATH = 'content'
@@ -25,14 +27,21 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('github',  'https://github.com/MerlinTheProgramist'),
-          ('twitter', 'https://twitter.com/Merlin49979988'),
-          ('steam',   'https://steamcommunity.com/id/JestemMerlinem'),
-          ('discord', ''),)
+          ('twitter', 'https://x.com/Merlin85994834'),
+          )
 
 DEFAULT_PAGINATION = 10
 
 DEFAULT_DATE_FORMAT = '%d-%m-%Y'
 
+IGNORE_FILES = [".#*", "drafts"]
+
+INDEX_SAVE_AS = "Projects.html"
+
+# all articles from the drafts folder get assigned a draft status automaticly
+# EXTRA_PATH_METADATA = {
+    # "drafts": {"status": "draft"},
+# }
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

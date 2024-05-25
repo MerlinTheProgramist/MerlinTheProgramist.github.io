@@ -1,5 +1,8 @@
 title: Contact
-summary: \> /dev/contact
+summary: ls /dev/contact
+save_as: Contact.html
 
-e-mail: Kvasjir@proton.me  
-discord: Melrin_1#82273
+### How to reach me?
+
+e-mail: Kvasjir@proton.me ()  
+discord: Melrin_1#82273 ()

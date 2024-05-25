@@ -1,7 +1,8 @@
 Title: Led chessboard project
 Date: 2022-07-1 10:30
-Category: project
+Category: electronics
 summary: Electronics led chessboard that enables palaying with bots
+status:draft
 
 ## Yet Another Electric chess board with many useless features 
 

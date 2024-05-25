@@ -1,26 +1,20 @@
 title: About
-summary: cat /var/About.log
+summary: cd ~
+save_as: index.html
 
 
-## Cheerio! 🖐
-I'm a self tough programmer, Math geek and Electronics entusiast.    
-I love to creating interesting projects, experiment with different algorithms and learn new thing along.  
-I'm open for cooperation offerings and other intriguing proposals.  
-Also would like to hear suggestions and creative criticism, for the best. 
+## Yo, I'm Merlin 🖐
+I'm a self taught programmer, particulary interested in low level applications.    
+I love to creating stuff (but I rarely publish :v), experimenting with algorithms and learning new things along the way.  
 
 ### Intrested in:
 - Math & algorithms
-- Computer architecture
+- Processor architecture
 - Game Development
-- Computer Vision
-- Deep Learning
+- Rocket science
 
-### Currently working with:
-- C++ 
-- C#
-- Python
+### Working with:
+- C/C++ (most familiar)
 - Rust
-
-### How to reach me? 🕾
-- mail: Kvasjir@proton.me
-- discord: Merlin_1#82273
+- Python
+- VHDL

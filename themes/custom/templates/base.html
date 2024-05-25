@@ -11,6 +11,11 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome-css.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />
+ 
+  <!-- katex for rendering Latex -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.css" integrity="sha384-K1E1xaIzoWihlXfiT5fcmLNabsnrl+dqc0errnRwtMX14tKRA9cCYNDGnXiHEZMs" crossorigin="anonymous">
+
+  
   {% if FEED_ALL_ATOM %}
   <link
     href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
@@ -25,14 +30,16 @@
 </head>
 
 <body id="">
-  <h1>// the-web-of-merlin<span class="blinking">▮</span></h1>
+  <h1>// the-web-of-merlin<!-- <span class="blinking-cursor">▉</span> --></h1>
   <nav>
-  <ul class="list-none">
-    <li class="head_button"><a href="/">cd ~</a></li>
-    {% for page in pages %}
-      <li class="head_button"><a href="{{SITEURL}}/{{page.url}}">{{page.summary}}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="pages">
+    <a class="head_button" href="/">cd ~</a>
+    <a class="head_button" href="{{SITEURL}}/Projects.html">ls /home/Projects</a>
+    <a class="head_button" href="{{SITEURL}}/Contact.html">ls /dev/contact</a>
+    <!-- {% for page in pages %} -->
+      <!-- <a class="head_button" href="{{SITEURL}}/{{page.url}}">{{page.summary}}</a> -->
+    <!-- {% endfor %} -->
+  </div>
   </nav>
   <header id="flex">
     <img width="160px" class="block flex-none" style="vertical-align:middle;" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png"/>
@@ -59,10 +66,11 @@
     <address>
       {% for name, link in SOCIAL %}
       <a href="{{ link }}">
-        <i class="fa fa-{{ name }}"></i>
-      </a>
+        <p class="green">{{name}} </p>
+        <!-- <i class="fa fa-{{ name }}"></i> -->
+      </a></br>
       {% endfor %}
     </address>
-    <p>Merlin TheProgrammist | All Free Stuff</p>
+    <p>Merlin TheProgrammist | All Free Stuff | Powered by <a href="https://getpelican.com">Pelican</a></p>
   </footer>
 </body>

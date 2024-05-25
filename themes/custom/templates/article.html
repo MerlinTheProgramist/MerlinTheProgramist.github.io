@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{article.title}}</h1>
+<div class="post-meta">
+  <p>created: <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} 📅</time></p>
+</div>
+<article>
+  {{article.content}}
+</article>
+{% endblock %}
