@@ -41,7 +41,7 @@
     <!-- {% endfor %} -->
   </div>
   </nav>
-  <header id="flex">
+  <header>
     <img width="160px" class="block flex-none" style="vertical-align:middle;" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png"/>
     <pre class="flex-auto">
      a88888b. dP                                  oo          dP 
@@ -51,17 +51,17 @@
     Y8.   .88 88    88 88.  ... 88.  ... 88       88 88.  .88    
      Y88888P' dP    dP `88888P' `88888P' dP       dP `88888P' oo</pre>
   </header>
-  <div>
+  <main>
     <nav id="side-panel">
       {% block side_bar %}
       {% endblock %}
     </nav>
-    <main>
+    <contents>
       {% block content %}
 
       {% endblock %}
-    </main>
-  </div>
+    </contents>
+  </main>
   <footer id="main">
     <address>
       {% for name, link in SOCIAL %}
