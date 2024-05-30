@@ -49,7 +49,6 @@ jobs:
             --extra-settings \
             SITEURL='"${{ steps.pages.outputs.base_url }}"' \
             FEED_DOMAIN='"${{ steps.pages.outputs.base_url }}"' \
-            THEME='"./sidecar"'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
