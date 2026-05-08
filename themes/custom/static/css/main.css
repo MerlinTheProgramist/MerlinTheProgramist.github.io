@@ -1,6 +1,6 @@
 :root {
   --background: #1c2226;
-  --meta-font: rgba(160, 174, 192, 255);
+  --meta-font: #A0AEC0;
   --footer-margin: 5rem;
   --accent-color: #37936b;
   --lighter-accent: #50ac84;
@@ -36,7 +36,7 @@ main {
 }
 
 /* main>* { */
-  /* width: 100%; */
+/* width: 100%; */
 /* } */
 
 header {
@@ -241,6 +241,6 @@ sup.numbers {
   color: var(--lighter-accent);
 }
 
-content{
+content {
   padding-right: var(--side-width);
 }

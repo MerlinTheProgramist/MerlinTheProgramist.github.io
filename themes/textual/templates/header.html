@@ -11,6 +11,12 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome-css.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css" />
+  <style>
+    @font-face {
+      font-family: BIOS;
+      src: url("{{ FEED_DOMAIN }}/{{ THEME_STATIC_DIR }}/fonts/WebPlus_IBM_BIOS.woff");
+    }
+  </style>
  
   <!-- katex for rendering Latex -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.css" integrity="sha384-K1E1xaIzoWihlXfiT5fcmLNabsnrl+dqc0errnRwtMX14tKRA9cCYNDGnXiHEZMs" crossorigin="anonymous">
@@ -32,38 +38,7 @@
   {% endblock %}
 </head>
 
-<body id="">
-  <h1>// the-web-of-merlin<!-- <span class="blinking-cursor">▉</span> --></h1>
-  <nav>
-  <div class="pages">
-    <a class="head_button" href="/">cd ~</a>
-    <a class="head_button" href="{{SITEURL}}/Projects.html">ls /home/Projects</a>
-    <a class="head_button" href="{{SITEURL}}/Contact.html">ls /dev/contact</a>
-    <!-- {% for page in pages %} -->
-      <!-- <a class="head_button" href="{{SITEURL}}/{{page.url}}">{{page.summary}}</a> -->
-    <!-- {% endfor %} -->
-  </div>
-  </nav>
-  <main>
-    <nav id="side-panel">
-      {% block side_bar %}
-      {% endblock %}
-    </nav>
-    <contents>
-      {% block content %}
-
-      {% endblock %}
-    </contents>
-  </main>
-  <footer id="main">
-    <address>
-      {% for name, link in SOCIAL %}
-      <a href="{{ link }}">
-        <p class="green">{{name}} </p>
-        <!-- <i class="fa fa-{{ name }}"></i> -->
-      </a></br>
-      {% endfor %}
-    </address>
-    <p>Merlin TheProgrammist | All Free Stuff | Powered by <a href="https://getpelican.com">Pelican</a></p>
-  </footer>
+<body>
+{% block body %}
+{% endblock body %}
 </body>

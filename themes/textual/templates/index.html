@@ -1,0 +1,51 @@
+{% extends "header.html" %}
+{% block body %}
+<header>
+  <pre>
+8""""8                      8
+8      eeeee eeeee eeeee    8     eeeee eeeee  eeeee
+8eeeee 8  88 8  88 8   8    8e    8   8 8   8  8   "
+    88 8   8 8   8 8e  8    88    8eee8 8eee8e 8eeee
+e   88 8   8 8   8 88  8    88    88  8 88   8    88
+8eee88 8eee8 8eee8 88  8    88eee 88  8 88eee8 8ee88 
+  </pre>
+</header>
+<main>
+  <h2>ABOUT ME</h2>
+  <article>
+    {{ pages[0].content }}
+  </article><br>
+  <h2>BLOG</h2>
+    <ul class="articles">
+      {% for article in articles %}
+      <li>
+          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}"># {{ article.title }}</a>
+            <!-- · -->
+            <!-- {% for t in article.tags %} -->
+            <!-- <a class="tag" href="{{ SITEURL }}/{{ t.url }}">{{ t }}</a> -->
+            <!-- {% endfor %} -->
+          <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }} </time>
+          <!-- /.post-info -->
+          <!-- <div class="post-content"> {{ article.summary }} </div> -->
+          <!-- /.entry-content -->
+          <!-- <div class="post-meta"> -->
+            <!-- <span class="tags"> -->
+            <!-- </span> -->
+          <!-- </div> -->
+      </li>
+      {% endfor %}
+    </ul>
+
+</main>
+<footer id="main">
+  <address>
+    {% for name, link in SOCIAL %}
+    <a href="{{ link }}">
+      <p>{{name}} </p>
+      <!-- <i class="fa fa-{{ name }}"></i> -->
+    </a></br>
+    {% endfor %}
+  </address>
+  
+</footer>
+{% endblock body %}

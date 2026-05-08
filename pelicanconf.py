@@ -2,9 +2,13 @@ AUTHOR = 'Merlin'
 SITENAME = "Merlin's_portfolio"
 SITEURL = ''
 
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ["pelican_katex"]
 
-THEME = "themes/custom/"
+# MARKDOWN = ["codehilite(css_class=highlight)", "extra", "toc"]
+
+
+THEME = "themes/textual/"
 
 PATH = 'content'
 
@@ -27,7 +31,7 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('github',  'https://github.com/MerlinTheProgramist'),
-          ('twitter', 'https://x.com/Merlin85994834'),
+          
           )
 
 DEFAULT_PAGINATION = 10
@@ -36,7 +40,7 @@ DEFAULT_DATE_FORMAT = '%d-%m-%Y'
 
 IGNORE_FILES = [".#*", "drafts"]
 
-INDEX_SAVE_AS = "Projects.html"
+# INDEX_SAVE_AS = "Projects.html"
 
 # all articles from the drafts folder get assigned a draft status automaticly
 # EXTRA_PATH_METADATA = {

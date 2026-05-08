@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block body %}
+<a href="/">« back</a>
+<h2>{{article.title}}</h2>
+<div class="post-meta">
+  <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }}</time>
+</div>
+<article>
+  {{ article.content }}
+</article>
+{% endblock %}
