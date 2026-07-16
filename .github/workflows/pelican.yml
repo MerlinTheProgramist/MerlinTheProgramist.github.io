@@ -26,9 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Checkout theme
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: sidecar
           repository: seanh/sidecar
